@@ -1,1 +1,64 @@
-example@form page
+<!-- example@form page -->
+
+<!-- <form class="new_job_application" id="new_job_application" action="/job_applications" accept-charset="UTF-8" method="post">
+  <p>
+    <label for="job_application_full_name">Full name</label>
+    <input type="text" name="job_application[full_name]" id="job_application_full_name" />
+  </p>
+
+  <p>
+    <label for="job_application_phone">Phone</label>
+    <input type="tel" name="job_application[phone]" id="job_application_phone" />
+  </p>
+
+  <p>
+    <label for="job_application_hobby">Hobby</label>
+    <input type="text" name="job_application[hobby]" id="job_application_hobby" />
+  </p>
+
+  <p>
+    <label for="job_application_years_experience">Years experience</label>
+    <input type="number" name="job_application[years_experience]" id="job_application_years_experience" />
+  </p>
+
+  <p>
+   <label for="job_application_available_date">Available date</label>
+   <input type="date" name="job_application[available_date]" id="job_application_available_date" />
+ </p>
+
+ <p>
+   <input type="submit" name="commit" value="Create Job application" />
+ </p>
+</form> -->
+
+
+<%= form_for @job_application do |form_builder| %>
+  <div class="new_job_application">
+    <%= form_builder.label :full_name %>
+    <%= form_builder.text_field :full_name %>
+  </div>
+
+  <div class="new_job_application">
+    <%= form_builder.label :phone %>
+    <%= form_builder.telephone_field :phone %>
+  </div>
+
+  <div class="new_job_application">
+    <%= form_builder.label :hobby %>
+    <%= form_builder.text_field :hobby %>
+  </div>
+
+  <div class="new_job_application">
+    <%= form_builder.label :years_experience %>
+    <%= form_builder.number_field :years_experience %>
+  </div>
+
+  <div class="new_job_application">
+    <%= form_builder.label :available_date %>
+    <%= form_builder.date_field :available_date %>
+  </div>
+
+  <div class="new_job_application">
+    <%= form_builder.submit %>
+  </div>
+<% end %>
